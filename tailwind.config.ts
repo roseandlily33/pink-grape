@@ -8,6 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        header: ['var(--font-header)'],
+        main: ['var(--font-main)']
+      },
+      colors: {
+        "red": "#E50914",        
+        "orange": "#E56C09",
+        "yellow": "#E19527",
+        "lightYellow": "#E7AB54",
+        "lightRed": "#d4b5b5",
+        "black": "#191717"
+      }, 
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -15,6 +27,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+  ],
 };
 export default config;
