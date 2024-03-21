@@ -63,15 +63,14 @@ button:hover{
   background-color: red;
 }
 
-/* .backgroundImage{
-  background-image: url('./components/Banner/mesh-gradient.png');
-  height: 60%;
+.backgroundImage{
+  background-image: url('../public/Login-Background.jpg');
+  height: 100vh;
   width: 100%;
   background-size: cover;
   position: absolute;
   z-index: -3;
-
-} */
+}
 /* Play Icon */
 .material-symbols-outlined {
   font-variation-settings:

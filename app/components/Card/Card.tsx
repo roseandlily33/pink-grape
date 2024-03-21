@@ -8,7 +8,7 @@ import cls from 'classnames'
 
 export default function Card(props:any) {
 const {imgUrl, size, idx, id, title} = props;
-console.log('Card props', props)
+
 const [errImg, setErrImg] = useState(imgUrl);
 let width;
 let height;

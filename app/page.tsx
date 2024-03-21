@@ -4,12 +4,12 @@ import Navbar from "./components/Navbar/navbar";
 import SectionCard from "./components/SectionCard/SectionCard";
 import {getPopularVideos, getVideos} from './utils/videos';
 
-
 export default async function Home() {
  
   const disneyVideos = await getVideos("disney trailer");
   const travelVideos = await getVideos("travel");
-  const popularVideos = await getPopularVideos()
+  const popularVideos = await getPopularVideos();
+
 
   return (
     <main className="h-screen">
