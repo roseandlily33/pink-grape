@@ -2,12 +2,12 @@ export const getCommonVideos = async(url) => {
     console.log(url)
     const YOUTUBE_API_KEY = process.env.YOUTUBE_KEY;
     const BASE_URL = "youtube.googleapis.com/youtube/v3";
-    const URL = `search?part=snippet&maxResults=25&q=${url}&type=video`;
+    
     // const response = await fetch(
     // `https://${BASE_URL}/${url}&maxResults=25&key=${YOUTUBE_API_KEY}`
     // );
     // const response = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${url}&type=video&key=${YOUTUBE_API_KEY}`);
-    const res = await fetch(`https://${BASE_URL}/${URL}&key=${YOUTUBE_API_KEY}`)
+    const res = await fetch(`https://${BASE_URL}/${url}&key=${YOUTUBE_API_KEY}`)
     
     const data = await res.json();
 
@@ -26,6 +26,16 @@ export const getCommonVideos = async(url) => {
         }
        } catch(err){
         console.log('Error getting videos', err)
-        return err;
+        return [];
        }})
+}
+
+export const getVideos = (url) => {
+    const URL = `search?part=snippet&maxResults=25&q=${url}&type=video`;
+    return getCommonVideos(URL)
+};
+
+export const getPopularVideos = () => {
+    const URL = `videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US`;
+    return getCommonVideos(URL);
 }

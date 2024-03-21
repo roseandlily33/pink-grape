@@ -2,14 +2,14 @@ import Head from "next/head";
 import Banner from "./components/Banner/Banner";
 import Navbar from "./components/Navbar/navbar";
 import SectionCard from "./components/SectionCard/SectionCard";
-import {getVideos} from './utils/videos';
-import 'flowbite';
+import {getPopularVideos, getVideos} from './utils/videos';
+
 
 export default async function Home() {
  
   const disneyVideos = await getVideos("disney trailer");
   const travelVideos = await getVideos("travel");
-  const popularVideos = await getVideos("videos")
+  const popularVideos = await getPopularVideos()
 
   return (
     <main className="h-screen">
@@ -17,8 +17,6 @@ export default async function Home() {
       <title>Nextflix</title>
       </Head>
       <div>
-      <Navbar />
-      <br />
       <Banner title="My Movie" subTitle="cute movie" imageUrl="/public/mesh-gradient.png" />
       </div>
       <br />
