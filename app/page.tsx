@@ -10,13 +10,13 @@ export default async function Home() {
   const travelVideos = await getVideos("travel");
   const popularVideos = await getPopularVideos();
 
-
   return (
     <main className="h-screen">
       <Head>
       <title>Nextflix</title>
       </Head>
-      <div>
+      <div className="h-100">
+        <Navbar />
       <Banner title="My Movie" subTitle="cute movie" imageUrl="/public/mesh-gradient.png" />
       </div>
       <br />

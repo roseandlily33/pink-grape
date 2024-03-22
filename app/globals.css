@@ -154,11 +154,10 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
 }
 .responsiveImg{
-  width: 100%;
-  height: auto;
-  max-height: 90vh;
+  max-height: 80vh;
 }
 .bannerOverlay{
   z-index: 10;

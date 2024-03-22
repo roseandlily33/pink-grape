@@ -7,7 +7,7 @@ import Logo from '../../../public/NEXTFLIX.svg'
 export default function Navbar() {
    
   return (
-    <nav className="p-5 flex justify-between items-center z-10">
+    <nav className="flex justify-between content-center p-5">
       <Image src={Logo} alt="nextflix logo" className='logo' width={10} height={20} />
       <div className="flex gap-3 items-center">
       <Link href="/movies" style={{color: 'white', fontSize: '1.2em'}}>Home</Link>
