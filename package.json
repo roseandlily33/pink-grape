@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "antd": "^5.15.3",
     "classnames": "^2.5.1",
     "framer-motion": "^11.0.13",
     "magic-sdk": "^27.0.0",

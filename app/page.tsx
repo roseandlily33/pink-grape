@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Banner from "./components/Banner/Banner";
 import Navbar from "./components/Navbar/navbar";
 import SectionCard from "./components/SectionCard/SectionCard";
@@ -12,12 +11,9 @@ export default async function Home() {
 
   return (
     <main className="h-screen">
-      <Head>
-      <title>Nextflix</title>
-      </Head>
-      <div className="h-100">
+      <div className="h-5/6 ">
         <Navbar />
-      <Banner title="My Movie" subTitle="cute movie" imageUrl="/public/mesh-gradient.png" />
+        <Banner title="My Movie" subTitle="cute movie" imageUrl="/public/mesh-gradient.png" />
       </div>
       <br />
       <div className="mainContent">
