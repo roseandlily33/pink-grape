@@ -11,7 +11,6 @@ export default function Banner(props:any) {
    <div>
    <div className='carouselDiv'>
    <Image src={Img2} width={0} height={0} alt="play" className='responsiveImg'/>
-  
     <div className='bannerOverlay gap-2'>
     <h1 className='text-red text-6xl'>Nextflix</h1>
         <h3 className='text-3xl'>{title}</h3>

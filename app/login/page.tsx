@@ -23,9 +23,12 @@ export default function Login() {
       setUserMsg('Enter a valid email');
     }
   };
+  // const handleLoginWithEmail = (e:any) => {
+  //   console.log(e)
+  // }
   const handleLoginWithEmail = async(e:any) => {
     e.preventDefault();
-   // router.push('/');
+    router.push('/');
     if (email) {
       try {
         setIsLoading(true);
